@@ -4,9 +4,9 @@ pipeline {
         docker { dockerfile true }
     }
     stages {
-        stage('Build') {
+        stage('Test') {
             steps {
-              sh "docker build ."
+              sh "/Laith/nginx/nginx -V"
             }
         }
     }

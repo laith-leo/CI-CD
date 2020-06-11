@@ -6,19 +6,5 @@ pipeline {
               sh "/Laith/nginx/nginx -V"
             }
         }
-
-    stage('Release') {
-      step {
-    archiveArtifacts artifacts: '**', fingerprint: true
-        }
     }
-    }
-}
-
-
-
-
-
-
-
-
+  }

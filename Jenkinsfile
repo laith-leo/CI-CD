@@ -1,4 +1,3 @@
-
 pipeline {
         agent { dockerfile true }
     stages {
@@ -9,14 +8,13 @@ pipeline {
         }
 
     stage('Release') {
-
-                archiveArtifacts artifacts: '**', fingerprint: true
-       
+      step {
+    archiveArtifacts artifacts: '**', fingerprint: true
         }
-
-    
+    }
     }
 }
+
 
 
 

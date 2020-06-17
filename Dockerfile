@@ -7,11 +7,11 @@ RUN cd /tmp && wget http://nginx.org/download/nginx-1.18.0.tar.gz && tar zxf /tm
 RUN ls /tmp/
 RUN cd /tmp/nginx-1.18.0 && ./configure \
   --prefix=/Laith/nginx \
-  --sbin-path=/Laith/nginx/nginx \
-  --conf-path=/Laith/nginx/conf/nginx.conf \
-  --error-log-path=/Laith/nginx/logs/nginx-error.log \
-  --pid-path=/Laith/nginx/runtime/nginx.pid \
-  --lock-path=/Laith/nginx/runtime/nginx.lock \
+  --sbin-path=/usr/local/bin/nginx \
+  --conf-path=/etc/nginx/conf/nginx.conf \
+  --error-log-path=/var/logs/nginx-error.log \
+  --pid-path=/run/nginx/runtime/nginx.pid \
+  --lock-path=/run/nginx/runtime/nginx.lock \
   --with-http_ssl_module \
   --with-debug \
   --with-http_auth_request_module \

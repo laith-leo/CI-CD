@@ -1,7 +1,7 @@
 pipeline {
         agent { dockerfile true }
     stages {
-        stage('Confirm Deploy to Staging') {
+        stage('Staging') {
         agent none
         steps {
         input(message: 'Deploy to Stage', ok: "Hell yeah!, let's do it!")

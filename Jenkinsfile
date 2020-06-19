@@ -7,7 +7,7 @@ pipeline {
         input(message: 'Deploy to Stage', ok: "Hell yeah!, let's do it!")
   }
 }
-        stage('Test stage') {
+        stage('Testing') {
             steps {
               sh "/Laith/nginx/nginx -V"
             }
